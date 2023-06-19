@@ -1,0 +1,147 @@
+
+
+/* portfolio page design */
+
+.portfolio_page{
+  background-color: #e6e6e6;
+  padding: 20px;
+  font-family: 'robotolight';
+}
+.main_page{
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  background-color: #fff;
+  padding: 20px;
+}
+.left_side_bio{
+  width: 30%;
+  background-color: black;
+}
+.right_side_info{
+  width: 80%;
+}
+.profile_image{
+  text-align: center;
+}
+.profile_image img{
+  /* width: 100%; */
+  width: 144px;
+}
+.profile_title{
+  background-color: #f7d140;
+    margin: 0px 16px 9px 16px;
+    text-align: center;
+    padding: 7px;
+    font-family: 'robotomedium';
+    position: relative;
+    top: -18px;
+    border-radius: 5px;
+}
+.education_details{
+  color:#fff;
+  padding: 15px;
+  text-align: left;
+}
+.education_details p{
+  font-family: 'robotolight';
+  font-size: 15px;
+}
+.left_side_btm{
+  background-color: #e6e6e6;
+  padding: 15px;
+}
+
+.ext_row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+.ext_row span{
+  font-family: 'robotolight';
+}
+
+.heading_5{
+  font-family: 'robotobold';
+  font-size: 25px;
+  position: relative;
+  text-transform: uppercase;
+  margin: 10px 0px 25px 0px;
+}
+.heading_5::after{
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 41px;
+  background-color: #f7d140;
+  left: 0;
+  top: 39px;
+}
+.heading_6{
+  font-family: 'robotobold';
+  font-size: 15px;
+  margin: 0;
+}
+
+
+/* progress bar */
+.rating{
+  display: flex;
+}
+.rating span{
+  padding: 0 3px;
+}
+
+.pt_header{
+  background-color: #ddd;
+  padding: 30px 65px;
+}
+.pt_header h1{
+  font-family: 'robotobold';
+  font-size: 55px;
+  margin: 0;
+}
+.pt_header h1 span{
+  font-weight: 400;
+  font-family: 'robotolight' !important;
+}
+.job_title{
+    margin: 0px 0px 21px 0px;
+    padding: 4px 19px;
+    background: yellow;
+    display: inline-block;
+    font-size: 12px;
+    text-transform: none;
+    font-family: 'robotolight' !important;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+}
+.work_exp , .interest{
+  padding: 30px 65px;
+}
+.company_info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.experiance p{
+  font-size: 14px;
+  margin: 6px 0;
+}
+.yell_box{
+  background: #f7d140;
+  padding: 2px 12px;
+  margin-right: 21px;
+}
+.interest_list{
+  display: flex;
+  padding: 0px 6px;
+}
+.common_st{
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
