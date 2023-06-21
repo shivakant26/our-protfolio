@@ -4,6 +4,12 @@ import styles from "@/styles/Home.module.css";
 import downloadImage from "../assets/images/shiva.jpeg";
 import Image from "next/image";
 import Rating from "@/component/Rating";
+import {
+  EducationArray,
+  Experience,
+  TechnologyArray,
+  intrestArray,
+} from "@/constant/allData";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -36,65 +42,29 @@ export default function Home() {
               <p className={styles.profile_title}>React Developer</p>
               <div className={styles.education_details}>
                 <h5 className={styles.heading_5}>Education</h5>
-                <div className="education_first">
-                  <h6 className={styles.heading_6}>
-                    M.C.A (Master Of Computer Application)
-                  </h6>
-                  <p>Govt. Jabalpur Engneering Collage jabalpur 2014-2016</p>
-                </div>
-                <div className="education_second">
-                  <h6 className={styles.heading_6}>
-                    B.C.A (Bachlor Of Computer Application)
-                  </h6>
-                  <p>Awadesh Pratap Singh University Rewa 2011-2014</p>
-                </div>
+                {EducationArray?.map((element, index) => {
+                  return (
+                    <div className="education" key={index}>
+                      <h6 className={styles.heading_6}>{element.courseName}</h6>
+                      <p>{element.collageName}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
             <div className={styles.left_side_btm}>
               <div className={styles.expertise}>
                 <h5 className={styles.heading_5}>Expertise</h5>
-                <div className={styles.ext_row}>
-                  <span>Reactjs</span>
-                  <span className={styles.rating}>
-                    <Rating />
-                  </span>
-                </div>
-                <div className={styles.ext_row}>
-                  <span>Angular 4+</span>
-                  <span className={styles.rating}>
-                    <Rating />
-                  </span>
-                </div>
-                <div className={styles.ext_row}>
-                  <span>html/html5</span>
-                  <span className={styles.rating}>
-                    <Rating />
-                  </span>
-                </div>
-                <div className={styles.ext_row}>
-                  <span>Css/Css3</span>
-                  <span className={styles.rating}>
-                    <Rating />
-                  </span>
-                </div>
-                <div className={styles.ext_row}>
-                  <span>javascript</span>
-                  <span className={styles.rating}>
-                    <Rating />
-                  </span>
-                </div>
-                <div className={styles.ext_row}>
-                  <span>Nextjs</span>
-                  <span className={styles.rating}>
-                    <Rating />
-                  </span>
-                </div>
-                <div className={styles.ext_row}>
-                  <span>Redux</span>
-                  <span className={styles.rating}>
-                    <Rating />
-                  </span>
-                </div>
+                {TechnologyArray.map((item, index) => {
+                  return (
+                    <div key={index} className={styles.ext_row}>
+                      <span>{item.techName}</span>
+                      <span className={styles.rating}>
+                        <Rating />
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -114,64 +84,30 @@ export default function Home() {
             </div>
             <div className={styles.work_exp}>
               <h5 className={styles.heading_5}>Work Experience</h5>
-              <div className={styles.experiance}>
-                <h6 className={styles.heading_6}>
-                  Working as Reactjs & Nextjs Developer
-                </h6>
-                <div className={styles.company_info}>
-                  <span className={styles.yell_box}>Present - 2021</span>
-                  <span>Yuvasoft Solution Pvt. Ltd. Navlakha(indore)</span>
-                </div>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever
-                </p>
-              </div>
-              <div className={styles.experiance}>
-                <h6 className={styles.heading_6}>
-                  PHP Developer / Wordpress Developer
-                </h6>
-                <div className={styles.company_info}>
-                  <span className={styles.yell_box}>2019-2021</span>
-                  <span>
-                    Conative It Solution Pvt. Ltd. Industry House(indore)
-                  </span>
-                </div>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever
-                </p>
-              </div>
+              {Experience?.map((element, index) => {
+                return (
+                  <div className={styles.experiance} key={index}>
+                    <h6 className={styles.heading_6}>{element.jobTitle}</h6>
+                    <div className={styles.company_info}>
+                      <span className={styles.yell_box}>{element.session}</span>
+                      <span>{element.companyName}</span>
+                    </div>
+                    <p>{element.aboutExperince}</p>
+                  </div>
+                );
+              })}
             </div>
             <div className={styles.interest}>
               <h5 className={styles.heading_5}>interest</h5>
               <div className={styles.interest_list}>
-                <div className={styles.common_st}>
-                  <span>
-                    <i class="fa fa-globe"></i>
-                  </span>
-                  <span>Travel</span>
-                </div>
-                <div className={styles.common_st}>
-                  <span>
-                    <i class="fa fa-music"></i>
-                  </span>
-                  <span>Music</span>
-                </div>
-                <div className={styles.common_st}>
-                  <span>
-                    <i class="fa fa-file"></i>
-                  </span>
-                  <span>Writing</span>
-                </div>
-                <div className={styles.common_st}>
-                  <span>
-                    <i class="fa fa-cubes"></i>
-                  </span>
-                  <span>Sports</span>
-                </div>
+                {intrestArray?.map((ele, index) => {
+                  return (
+                    <div className={styles.common_st}>
+                      <span>{ele.icon}</span>
+                      <span>{ele.int_name}</span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
