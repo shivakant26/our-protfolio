@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import downloadImage from "../assets/images/shiva.jpg";
+import downloadImage from "../assets/images/shiva.jpeg";
 import Image from "next/image";
 import Rating from "@/component/Rating";
 const inter = Inter({ subsets: ["latin"] });
