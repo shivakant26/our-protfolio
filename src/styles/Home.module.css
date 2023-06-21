@@ -145,3 +145,34 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media only screen and (max-width: 1023px) {
+  .main_page{
+    width: 96%;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .left_side_bio{
+    width: 100%;
+  }
+  .right_side_info{
+    width: 100%;
+  }
+  .pt_header, .work_exp , .interest{
+    padding: 30px 16px;
+  }
+}
+
+@media only screen and (max-width: 649px) {
+  .pt_header h1{
+    font-size: 49px;
+  }
+  .heading_5{
+    font-size: 23px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+ 
+}
